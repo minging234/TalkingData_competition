@@ -1,7 +1,9 @@
 import numpy as np
 import pandas as pd
+# import scipy
 
 from sklearn.preprocessing import OneHotEncoder
+pd.options.mode.chained_assignment = None
 
 if __name__ == '__main__':
     path_train = './mnt/ssd/kaggle-talkingdata2/competition_files/train.csv'
@@ -67,7 +69,7 @@ if __name__ == '__main__':
     X = np.concatenate([X, time], axis=1)
 
     print('One hot encoding all columns')
-    enc = OneHotEncoder(dtype=np.bool)
+    enc = OneHotEncoder(dtype=np.bool, sparse=False)
     X = enc.fit_transform(X)
     print('End one hot encoding')
 
