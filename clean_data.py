@@ -6,7 +6,7 @@ from sklearn.preprocessing import OneHotEncoder
 pd.options.mode.chained_assignment = None
 
 if __name__ == '__main__':
-    # path_train = './mnt train/ssd/kaggle-talkingdata2/competition_files/train.csv'
+    path_train = '../mnt train/ssd/kaggle-talkingdata2/competition_files/train.csv'
 
     train_cols = [
         'ip', 'app', 'device', 'os', 'channel', 'click_time', 'is_attributed'
